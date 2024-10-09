@@ -1,0 +1,17 @@
+<h1>Films's details:</h1>
+
+<h2><%= @film.title %> </h2>
+<p><%= @film.year_of_release %> </p>
+<p><%= @film.plot %> </p>
+<p><%= @film.country %> </p>
+<p><%= @film.duration %> </p>
+<p><%= @film.director.name %> </p>
+<p><%= @film.genre.title %> </p>
+
+<ul>
+    <li><%= link_to "Edit Film", edit_film_path(@film) %></li>
+    <li><%= link_to "Destroy", film_path(@film), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

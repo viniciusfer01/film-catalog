@@ -1,0 +1,75 @@
+<%= form_with model: film do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% film.errors.full_messages_for(:title).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :year_of_release %><br>
+    <%= form.text_field :year_of_release %>
+    <% film.errors.full_messages_for(:year_of_release).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :plot %><br>
+    <%= form.text_area :plot %>
+    <% film.errors.full_messages_for(:plot).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :country %><br>
+    <%= form.text_field :country %>
+    <% film.errors.full_messages_for(:country).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :duration %><br>
+    <%= form.text_field :duration %>
+    <% film.errors.full_messages_for(:duration).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :director_id %><br>
+    <%= form.text_field :director_id %>
+    <% film.errors.full_messages_for(:director_id).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :genre_id %><br>
+    <%= form.text_field :genre_id %>
+    <% film.errors.full_messages_for(:genre_id).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

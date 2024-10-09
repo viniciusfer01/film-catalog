@@ -1,0 +1,14 @@
+<h1>Films</h1>
+<p>All of them are listed here!</p>
+
+<ul>
+    <% @films.each do | film | %>
+        <li>
+            <%= link_to film.name, film %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "New Film", new_film_path %>
+
+
