@@ -1,0 +1,45 @@
+<%= form_with model: director do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% director.errors.full_messages_for(:name).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :nationality %><br>
+    <%= form.text_field :nationality %>
+    <% director.errors.full_messages_for(:nationality).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :date_of_birth %><br>
+    <%= form.date_select :date_of_birth %>
+    <% director.errors.full_messages_for(:date_of_birth).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :genre_id %><br>
+    <%= form.text_field :genre_id %>
+    <% director.errors.full_messages_for(:genre_id).each do |message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
