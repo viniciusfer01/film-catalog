@@ -1,5 +1,7 @@
-<h1>
-    <%= @genre.title %> 
-</h1>
+<h1><%= @genre.title %></h1>
 
-<p>You'll be able to edit the genre later</p>
+<ul>
+    <li>
+        <%= link_to "Edit Genre", edit_genre_path(@genre)%>
+    </li>
+</ul>
