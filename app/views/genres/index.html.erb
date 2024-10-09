@@ -1,0 +1,12 @@
+<h1>Film Genres</h1>
+<p>This is where you find all the genres of films!</p>
+
+<ul>
+    <% @genres.each do |genre| %>
+        <li> 
+            <%= link_to genre.title, genre %>
+        </li>
+    <% end %>
+</ul>
+
+<input type="button" value="Add More">
