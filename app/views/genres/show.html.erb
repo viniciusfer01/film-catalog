@@ -3,5 +3,9 @@
 <ul>
     <li>
         <%= link_to "Edit Genre", edit_genre_path(@genre)%>
+        <%= link_to "DESTROY GENRE HAHAHA!", genre_path(@genre), data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+        } %>
     </li>
 </ul>
