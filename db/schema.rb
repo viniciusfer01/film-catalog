@@ -10,38 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_09_041220) do
-  create_table "directors", force: :cascade do |t|
-    t.string "name"
-    t.string "nationality"
-    t.date "birth_date"
-    t.integer "favourite_genre_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["favourite_genre_id"], name: "index_directors_on_favourite_genre_id"
-  end
-
-  create_table "films", force: :cascade do |t|
-    t.string "title"
-    t.date "release_date"
-    t.text "plot"
-    t.string "country_of_origin"
-    t.integer "duration"
-    t.integer "director_id", null: false
-    t.integer "genre_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["director_id"], name: "index_films_on_director_id"
-    t.index ["genre_id"], name: "index_films_on_genre_id"
-  end
-
+ActiveRecord::Schema[7.1].define(version: 2024_10_09_211102) do
   create_table "genres", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "directors", "favourite_genres"
-  add_foreign_key "films", "directors"
-  add_foreign_key "films", "genres"
 end
